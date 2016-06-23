@@ -1,0 +1,25 @@
+<div class="step step-one">
+    <div class="field">
+        <div class="field__label">Name</div>
+        <input type="text" ng-model="form.user.name" required>
+    </div>
+
+    <div class="field">
+        <div class="field__label">Ages</div>
+        <input type="number" min="0" step="1" ng-model="form.user.ages" required>
+    </div>
+
+    <div class="field _radio">
+        <div class="field__label">Sex</div>
+        <label>
+            <input type="radio" ng-model="form.user.sex" value="1" required>
+            Male
+        </label>
+        <label>
+            <input type="radio" ng-model="form.user.sex" value="0" required>
+            Female
+        </label>
+    </div>
+
+    <button class="step__next" ng-click="form.continue()" ng-disabled="form.form.$invalid">Continue</button>
+</div>

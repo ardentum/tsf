@@ -1,0 +1,14 @@
+<div class="form-progress">
+    <div class="form-progress__step"
+        ng-repeat="step in steps"
+        ng-class="{'_completed': step.completed, '_active': step.active}"
+        ng-click="onSelect({step: step})">
+        <div class="form-progress__step-dot">
+            <div class="form-progress__step-name">
+                {{::step.name}}
+            </div>
+            <span ng-show="!step.completed">{{$index + 1}}</span>
+            <div class="form-progress__checkmark" ng-show="step.completed"></div>
+        </div>
+    </div>
+</div>

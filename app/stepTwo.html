@@ -1,0 +1,37 @@
+<div class="step step-two">
+    <div class="field">
+        <div class="field__label">Phone</div>
+        <input type="tel" ng-model="form.user.tel" required>
+    </div>
+
+    <div class="field">
+        <div class="field__label">Email</div>
+        <input type="email" ng-model="form.user.email" required>
+    </div>
+
+    <div class="summary">
+        <div class="summary__field" ng-if="form.user.name">
+            Name:
+            <div class="summary__value">{{form.user.name}}</div>
+        </div>
+        <div class="summary__field" ng-if="form.user.ages">
+            Ages:
+            <div class="summary__value">{{form.user.ages}}</div>
+        </div>
+        <div class="summary__field" ng-if="form.user.sex">
+            Sex:
+            <div class="summary__value">{{form.user.sex ? 'Male' : 'Female'}}</div>
+        </div>
+        <div class="summary__field" ng-if="form.user.tel">
+            Tel:
+            <div class="summary__value">{{form.user.tel}}</div>
+        </div>
+        <div class="summary__field" ng-if="form.user.email">
+            Email:
+            <div class="summary__value">{{form.user.email}}</div>
+        </div>
+    </div>
+
+    <button class="step__back" ng-click="form.back()">Back</button>
+    <button class="step__next" ng-click="form.submit()" ng-disabled="form.form.$invalid">Submit</button>
+</div>

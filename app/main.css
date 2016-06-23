@@ -1,0 +1,114 @@
+.form {
+    width: 400px;
+    margin: 40px auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+.form-progress {
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.form-progress__step {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    top: -10px;
+    min-width: 100px;
+    height: 20px;
+    cursor: pointer;
+    border-top: solid 2px #A5A4A6;
+}
+
+.form-progress__step-name {
+    position: absolute;
+    white-space: nowrap;
+    left: 50%;
+    top: -20px;
+    text-align: center;
+    transform: translateX(-50%);
+    color: #222;
+}
+
+.form-progress__step-dot {
+    display: inline-block;
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background: #A5A4A6;
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.form-progress__step._completed {
+    border-color: #60B319;
+}
+
+.form-progress__step._completed .form-progress__step-dot,
+.form-progress__step._active .form-progress__step-dot {
+    background: #60B319;
+}
+
+.form-progress__step:first-child {
+    margin-left: 0;
+}
+
+.form-progress__step:nth-last-child(1) {
+    margin-right: 0;
+    border: 0;
+}
+
+.form-progress__checkmark {
+    width: 10px;
+    height: 4px;
+    border: solid #fff;
+    border-width: 0 0 1px 1px;
+    transform: rotate(-45deg) translate(0px, 7px);
+}
+
+input[type=text], input[type=number], input[type=tel], input[type=email] {
+    border: solid 1px #ccc;
+    padding: 5px;
+}
+
+input:invalid {
+    background: #ffe1e6;
+}
+
+.field {
+    margin-bottom: 20px;
+}
+
+.field._radio label{
+    display: block;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    background: #eee;
+    border-radius: 3px;
+    outline: none !important;
+    cursor: pointer;
+}
+
+.summary {
+    width: 400px;
+    margin: 40px 0;
+}
+
+.summary__field {
+    margin-bottom: 10px;
+}
+
+.summary__value {
+}
